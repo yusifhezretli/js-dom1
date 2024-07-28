@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>
+    <div>
+        <input type="number" id="num1" >
+        <input type="number" id="num2" >
+        <button onclick="hesabla('+')">+</button>
+        <button onclick="hesabla('-')">-</button>
+        <button onclick="hesabla('*')">*</button>
+        <button onclick="hesabla('/')">/</button>
+    </div>
+
+
+    <h1>sözü tərsinə çevirən proqram</h1>
+    <div>
+        <input type="text" id="inputString" placeholder="Enter a string">
+        <button onclick="tersinesoz()">Convert</button>
+    </div>
+
+
+    <h1>Div Style Changer</h1>
+    <div>
+        <input type="number" id="width" placeholder="Width">
+        <input type="number" id="height" placeholder="Height">
+        <input type="number" id="borderWidth" placeholder="Border Width">
+        
+        <select id="borderStyle">
+            <option value="" disabled selected>Border Style</option>
+            <option value="solid">Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="double">Double</option>
+            <option value="groove">Groove</option>
+        </select>
+        
+        <select id="borderColor">
+            <option value="" disabled selected>Border Color</option>
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        
+        <select id="backgroundColor">
+            <option value="" disabled selected>Background Color</option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        
+        <button onclick="changeDivStyle()">Ok</button>
+    </div>
+    
+    <div class="custom-div" id="customDiv"></div>
+
+   <div class="div">
+
+
+    <input type="number" id="widthInput"  placeholder="Width">
+    <input type="number" id="heightInput" placeholder="Height">
+    <input type="number" id="borderWidthInput" placeholder="Border Width">
+    
+    <button onclick="updateWidth()">ok</button>
+    <div id="myDiv"></div>
+
+   </div>
+
+
+   <div class="calculator">
+    <div id="display" class="display">0</div>
+    <div class="buttons">
+        <button onclick="appendOperator('+')" class="operator">+</button>
+        <button onclick="appendOperator('-')" class="operator">-</button>
+        <button onclick="appendOperator('*')" class="operator">*</button>
+        <button onclick="appendOperator('/')" class="operator">/</button>
+        
+        <button onclick="appendNumber(7)" class="number">7</button>
+        <button onclick="appendNumber(8)" class="number">8</button>
+        <button onclick="appendNumber(9)" class="number">9</button>
+        <button onclick="calculate()" class="operator equals">=</button>
+        <button onclick="appendNumber(4)" class="number">4</button>
+        <button onclick="appendNumber(5)" class="number">5</button>
+        <button onclick="appendNumber(6)" class="number">6</button>
+        <button onclick="appendNumber(1)" class="number">1</button>
+        <button onclick="appendNumber(2)" class="number">2</button>
+        <button onclick="appendNumber(3)" class="number">3</button>
+        <button onclick="appendNumber(0)" class="number zero">0</button>
+        <button onclick="appendNumber('.')" class="number">.</button>
+        <button onclick="clearDisplay()" class="operator clear">AC</button>
+  
+    </div>
+   </div>
+
+ <section class="portfolio section">
+    <div class="portfolio-head">
+        <h2 class="section_title">PORTFOLIO</h2>
+        <p><em>Lorem ipsum dolor sit amet consectetur.</em></p>
+    </div>
+    <div class="portfolio_container">
+        <div class="portfolio_wrap-container">
+            <!-- Kart 1 -->
+            <div class="portfolio_item filter-smm">
+                <div class="portfolio_wrap">
+                    <img src="./images/1.jpg" class="img-fluid" alt>
+                    <div class="portfolio_info">
+                        <h4><a href="#" class="open-modal" >+</a></h4>
+                    </div>
+                    <div class="portfolio-bottom">
+                        <h3>Threads</h3>
+                        <span><em>Illustration</em></span>
+                    </div>
+                </div>
+                <div class="modal" id="modal-1">
+                    <span class="close-modall">&times;</span>
+                    <div class="modal-content">
+                        <h2>PROJECT NAME</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="./images/1.jpg" class="img-fluid" alt>
+                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><strong>Client:</strong> Threads</p>
+                        <p><strong>Category:</strong> Illustration</p>
+                        <button class="close-modal center-button">Close Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 2 -->
+            <div class="portfolio_item filter-web">
+                <div class="portfolio_wrap">
+                    <img src="./images/2.jpg" class="img-fluid" alt>
+                    <div class="portfolio_info">
+                        <h4><a href="#" class="open-modal" >+</a></h4>
+                    </div>
+                    <div class="portfolio-bottom">
+                        <h3>Threads</h3>
+                        <span><em>Illustration</em></span>
+                    </div>
+                </div>
+                <div class="modal" id="modal-2">
+                    <span class="close-modall">&times;</span>
+                    <div class="modal-content">
+                        <h2>PROJECT NAME</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="./images/2.jpg" class="img-fluid" alt>
+                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><strong>Client:</strong> Threads</p>
+                        <p><strong>Category:</strong> Illustration</p>
+                        <button class="close-modal center-button">Close Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 3 -->
+            <div class="portfolio_item filter-seo">
+                <div class="portfolio_wrap">
+                    <img src="./images/3.jpg" class="img-fluid" alt>
+                    <div class="portfolio_info">
+                        <h4><a href="#" class="open-modal">+</a></h4>
+                    </div>
+                    <div class="portfolio-bottom">
+                        <h3>Threads</h3>
+                        <span><em>Illustration</em></span>
+                    </div>
+                </div>
+                <div class="modal" id="modal-3">
+                    <span class="close-modall">&times;</span>
+                    <div class="modal-content">
+                        <h2>PROJECT NAME</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="./images/3.jpg" class="img-fluid" alt>
+                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><strong>Client:</strong> Threads</p>
+                        <p><strong>Category:</strong> Illustration</p>
+                        <button class="close-modal center-button">Close Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 4 -->
+            <div class="portfolio_item filter-smm">
+                <div class="portfolio_wrap">
+                    <img src="./images/4.jpg" class="img-fluid" alt>
+                    <div class="portfolio_info">
+                        <h4><a href="#" class="open-modal">+</a></h4>
+                    </div>
+                    <div class="portfolio-bottom">
+                        <h3>Threads</h3>
+                        <span><em>Illustration</em></span>
+                    </div>
+                </div>
+                <div class="modal" id="modal-4">
+                    <span class="close-modall">&times;</span>
+                    <div class="modal-content">
+                        <h2>PROJECT NAME</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="./images/4.jpg" class="img-fluid" alt>
+                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><strong>Client:</strong> Threads</p>
+                        <p><strong>Category:</strong> Illustration</p>
+                        <button class="close-modal center-button">Close Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 5 -->
+            <div class="portfolio_item filter-smm">
+                <div class="portfolio_wrap">
+                    <img src="./images/5.jpg" class="img-fluid" alt>
+                    <div class="portfolio_info">
+                        <h4><a href="#" class="open-modal" >+</a></h4>
+                    </div>
+                    <div class="portfolio-bottom">
+                        <h3>Threads</h3>
+                        <span><em>Illustration</em></span>
+                    </div>
+                </div>
+                <div class="modal" id="modal-5">
+                    <span class="close-modall">&times;</span>
+                    <div class="modal-content">
+                        <h2>PROJECT NAME</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="./images/5.jpg" class="img-fluid" alt>
+                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><strong>Client:</strong> Threads</p>
+                        <p><strong>Category:</strong> Illustration</p>
+                        <button class="close-modal center-button">Close Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 6 -->
+            <div class="portfolio_item filter-smm">
+                <div class="portfolio_wrap">
+                    <img src="./images/6.jpg" class="img-fluid" alt>
+                    <div class="portfolio_info">
+                        <h4><a href="#" class="open-modal" >+</a></h4>
+                    </div>
+                    <div class="portfolio-bottom">
+                        <h3>Threads</h3>
+                        <span><em>Illustration</em></span>
+                    </div>
+                </div>
+                <div class="modal" id="modal-6">
+                    <span class="close-modall">&times;</span>
+                    <div class="modal-content">
+                        <h2>PROJECT NAME</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        <img src="./images/6.jpg" class="img-fluid" alt>
+                        <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p><strong>Client:</strong> Threads</p>
+                        <p><strong>Category:</strong> Illustration</p>
+                        <button class="close-modal center-button">Close Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2>Accordion Menu</h2>
+
+<button class="accordion"><i class='bx bx-chevron-right'></i> Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id, nulla exercitationem obcaecati veritatis illum optio, eos minus quidem iusto officia repudiandae a at aut! Porro deserunt vel voluptatibus architecto reprehenderit quo illum ducimus! Cum voluptatibus asperiores facilis consequuntur. Modi doloribus eum quos esse eaque minus et aspernatur facilis? Quia asperiores repellendus harum sunt cumque quas iure nulla commodi tempore, repudiandae provident deleniti quidem autem, optio consectetur iusto officia debitis?</p>
+</div>
+
+<button class="accordion"><i class='bx bx-chevron-right'></i> Section 2</button>
+<div class="panel">
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio praesentium doloribus vitae, ex error labore non eligendi? Similique iste unde inventore facilis excepturi libero dicta reiciendis. Eligendi optio, consectetur quidem ut, possimus eaque aliquam perferendis tempora minus ipsum consequatur debitis aspernatur saepe harum nihil repellat laborum asperiores id et ex excepturi esse doloribus? Vel eaque dicta praesentium deleniti. Nesciunt tempore quo, minus itaque culpa magni? Dignissimos itaque ratione quidem possimus!</p>
+</div>
+
+<button class="accordion"><i class='bx bx-chevron-right'></i> Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, quaerat quia. Facilis praesentium dicta nulla laboriosam! Consequatur porro, voluptatibus totam doloremque eveniet placeat numquam voluptas ullam, aut aspernatur reiciendis ex, quaerat optio maiores impedit error dolorem quas natus quis accusantium eligendi delectus iste assumenda architecto! Ab voluptatem ipsa mollitia iure quos corrupti excepturi dolores amet hic labore, aut dolore recusandae error quod delectus? Repudiandae eligendi in unde corrupti asperiores laudantium.</p>
+</div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
