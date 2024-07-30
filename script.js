@@ -140,41 +140,32 @@ function calculate() {
     display.innerText = result;
 }
 
-let modal = document.querySelector('.modal'),
-            openModalButtons = document.querySelectorAll('.open-modal'),
-            closeModalButtons = document.querySelectorAll('.close-modall'),
-            closeProjectButton = document.querySelector('.close-modal');
+document.addEventListener('DOMContentLoaded', () => {
+    let openModalButtons = document.querySelectorAll('.open-modal');
+    let closeModalButtons = document.querySelectorAll('.close-modall, .close-modal');
 
-        let openModal = function () {
-            modal.classList.add('active-modal');
-        };
-
-        let closeModal = function () {
-            modal.classList.remove('active-modal');
-        };
-
-        openModalButtons.forEach(modalBtn => {
-            modalBtn.addEventListener('click', (event) => {
-                event.preventDefault();
-                openModal();
-            });
-        });
-
-        closeModalButtons.forEach(el => {
-            el.addEventListener('click', () => {
-                closeModal();
-            });
-        });
-
-        closeProjectButton.addEventListener('click', () => {
-            closeModal();
-        });
-
-        document.addEventListener('click', (event) => {
-            if (modal.classList.contains('active-modal') && !event.target.closest('.modal-content') && !event.target.closest('.open-modal')) {
-                closeModal();
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active-modal');
             }
         });
+    });
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const modal = button.closest('.modal');
+            if (modal) {
+                modal.classList.remove('active-modal');
+            }
+        });
+    });
+
+
+});
 
 
         let acc = document.querySelectorAll('.accordion');
